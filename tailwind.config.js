@@ -3,13 +3,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      xs: "320px", // Kichik ekran (320px va yuqori)
-      sm: "480px", // Kichik ekran (480px va yuqori)
-      md: "768px", // O'rta ekran (768px va yuqori)
-      lg: "1024px", // Katta ekran (1024px va yuqori)
-      xl: "1280px", // Juda katta ekran (1280px va yuqori)
-      "2xl": "1440px", // Juda katta ekran (1536px va yuqori)
-      "3xl": "1600px" // Juda katta ekran (1600px va yuqori)
+      xs: "320px", // Eng kichik ekran o'lchami
+      sm: "480px", // Kichik ekran
+      md: "640px", // O'rta ekran
+      lg: "768px", // Katta ekran
+      xl: "1024px", // Juda katta ekran
+      "2xl": "1280px", // 2x katta ekran
+      "3xl": "1440px" // 3x katta ekran // Juda katta ekran (1600px va yuqori)
     },
     extend: {}
   },
