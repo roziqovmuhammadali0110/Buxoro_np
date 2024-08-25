@@ -15,6 +15,7 @@ const Footer = () => {
           <p className="text-gray-700 max-w-[350px] xs:text-[15px] sm:text-[17px] md:text-[18px] lg:text-[20px]">
             'Bukhara Natural Product' has been a company that produces cotton
             fabrics for many years for use all over the world.
+            {t("Bukhara Natural Product")}
           </p>
         </div>
 
