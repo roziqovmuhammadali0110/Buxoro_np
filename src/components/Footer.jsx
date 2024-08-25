@@ -5,7 +5,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-white py-8 px-4">
+    <footer className="bg-white pb-8 px-4">
       {/* Logo va matn */}
       <div className="flex flex-wrap items-center lg:flex-row lg:items-start md:justify-around xl:justify-between space-y-6 lg:space-y-0 xs:space-x-4 lg:space-x-0">
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left pb-4">

@@ -3,9 +3,9 @@ import winter from "../assets/data/winter";
 
 const WinterCollection = () => {
   return (
-    <div className="py-32 container mx-auto">
+    <div className="lg:py-20 container mx-auto">
       <div className="w-full text-center">
-        <h1 className="font-bold text-[65px] text-[#000000]">
+        <h1 className="font-bold text-[65px] xs:text-[38px] md:text-[45px] lg:text-[50px] xl:text-[65px] text-[#000000]">
           Winter collection
         </h1>
         <p className="text-[22px] text-[#919191]">Bukhara Natural Product</p>
@@ -21,7 +21,7 @@ const WinterCollection = () => {
                 alt={item.name}
                 className="w-[250px] h-[200px] rounded-xl"
               />
-              <h2 className="text-[20px]">{item.name}</h2>
+              <h2 className="text-[16px]">{item.name}</h2>
             </Link>
           </div>
         ))}

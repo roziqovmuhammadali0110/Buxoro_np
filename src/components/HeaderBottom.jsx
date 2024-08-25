@@ -32,7 +32,7 @@ const headerB = [
 
 const HeaderBottom = () => {
   return (
-    <div className=" grid items-center justify-between xs:grid-cols-2 md:grid-cols-4 pb-32 ">
+    <div className=" grid items-center justify-between xs:grid-cols-2 md:grid-cols-4 pb-32 pt-4 ">
       {headerB?.map((item) => {
         return (
           <div
