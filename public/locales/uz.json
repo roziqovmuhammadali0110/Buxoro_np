@@ -1,1 +1,124 @@
-{}
+{
+  "navbar": {
+    "home": "Bosh sahifa",
+    "about": "Haqida",
+    "collection": "To'plam",
+    "contact": "Aloqa"
+  },
+  "about": {
+    "title": "Buxoro Tabiiy Mahsulotlari",
+    "paragraph1": "Buxoro matolari, Eco sumkalar. Fabrikamiz ko'p yillardan beri butun dunyo bo'ylab ishlatiladigan paxta matolarini ishlab chiqaruvchi kompaniya bo'lib kelgan.",
+    "paragraph2": "Bu kompaniya 17 yildan buyon mijozlarga xizmat ko'rsatib kelmoqda.",
+    "paragraph3": "Ushbu kompaniyaning asosiy maqsadi yuqori sifatli va iqtisodiy samarali mahsulotlar ishlab chiqarishdir.",
+    "paragraph4": "Kompaniyaning ishlab chiqarish jarayoni butunlay ekologik toza.",
+    "paragraph5": "Kompaniya mijozlarning talab va takliflariga ko'ra har qanday turdagi paxta xom ashyosini ishlab chiqarishi mumkin.",
+    "paragraph6": "Kompaniya O'zbekistondagi DongJia to'qimachilik mashinalarining rasmiy dileri hisoblanadi.",
+    "paragraph7": "Hozirda kompaniyaning nufuziga va muvaffaqiyatiga 80 dan ortiq oila moliyaviy ta'minlash orqali hissa qo'shmoqda.",
+    "paragraph8": "Ushbu talabni qondirish uchun, 50 ta to'quv dastgohi yuqori tezlikda, to'xtovsiz ishlamoqda.",
+    "paragraph9": "Biz oyiga 200-250 ming metr mato to'qish imkoniyatiga egamiz.",
+    "paragraph10": "Mijozlarimizning yuqori talablariga binoan, kompaniya endi yuqori sifatli premium eco-sumkalar ishlab chiqarishni yo‘lga qo‘ydi.",
+    "paragraph11": "Buxoro Tabiiy Mahsulotlari kompaniyasi o'z sodiq mijozlariga har doim xizmat ko'rsatishga tayyor.",
+    "imageAlt": "Buxoro Tabiiy Mahsulotlari"
+  },
+  "detailsPage": {
+    "noData": "Ma'lumot topilmadi.",
+    "material": "Material",
+    "pillowcase": "Yostiq jildi",
+    "sheet": "Ko'rpa jildi",
+    "duvetCover": "Duvet jildi",
+    "size": "O'lcham",
+    "manufacturer": "Ishlab chiqaruvchi",
+    "category": "Kategoriyasi",
+    "winterCollection": "Qishgi kolleksiya",
+    "descriptionTab": "Tavsif",
+    "reviewsTab": "Sharhlar",
+    "descriptionTitle": "Mahsulot haqida batafsil",
+    "beddingSetName": "To'shak to'plami",
+    "descriptionText": "Bu mahsulot yuqori sifatli materiallardan yasalgan va qulaylik yaratadi.",
+    "reviewsTitle": "Mijozlar sharhlari",
+    "noReviews": "Hozircha sharhlar mavjud emas.",
+    "firstReviewTitle": "Sharh yozish birinchi bo'ling!",
+    "emailDisclaimer": "Sizning email manzilingiz oshkor qilinmaydi.",
+    "ratingLabel": "Baholash:",
+    "nameLabel": "Ism",
+    "emailLabel": "Email",
+    "reviewLabel": "Sizning sharhingiz",
+    "submitButton": "Yuborish"
+  },
+  "home": {
+    "bukhara": "Buxoro",
+    "natural": "Tabiiy",
+    "product": "Mahsulot"
+  },
+  "automn": {
+    "materialQualityPercentage": "100%",
+    "materialQuality": "Material sifat",
+    "companyName": "'Buxoro Tabiiy Mahsulot'",
+    "companyDescription": "yillar davomida butun dunyo bo'ylab foydalanish uchun paxta matolarini ishlab chiqaradigan kompaniya bo'lib kelgan"
+  },
+  "automnCollection": {
+    "title": "Kuz kolleksiyasi",
+    "subtitle": "Buxoro Tabiiy Mahsulot"
+  },
+  "news": {
+    "title": "Yangiliklar",
+    "description": "Buxoro Tabiiy Mahsulot"
+  },
+  "summer": {
+    "title": "Yozgi To'plam",
+    "materialQuality": "Material Sifati",
+    "bukharaNaturalProduct": "Buxoro Tabiiy Mahsulot",
+    "companyDescription": "Dunyo bo'ylab foydalanish uchun paxta matolarini ishlab chiqaruvchi kompaniya"
+  },
+  "summerCollection": {
+    "title": "Yozgi To'plam",
+    "description": "Buxoro Tabiiy Mahsulot"
+  },
+  "footer": {
+    "description": "'Buxoro Tabiiy Mahsulot' kompaniyasi dunyo bo'ylab foydalanish uchun paxta matolarini ishlab chiqaruvchi kompaniya bo'lib kelmoqda.",
+    "menu": "Menyu",
+    "home": "Bosh sahifa",
+    "aboutUs": "Biz haqimizda",
+    "collection": "To'plam",
+    "contacts": "Aloqalar",
+    "contactAddress": "Buxoro, st.Alpomish 80.",
+    "email": "info@bnpfabric.com",
+    "phone1": "+998 93 383 75 85",
+    "phone2": "+998 93 960 78 00",
+    "subscribeTitle": "Bizning email ro'yxatimizga obuna bo'ling",
+    "subscribePlaceholder": "Email manzilingizni kiriting",
+    "subscribeButton": "Obuna bo'lish"
+  },
+  "headerBottom": {
+    "freeShipping": {
+      "title": "Bepul yetkazib berish",
+      "description": "Barcha buyurtmalarga bepul yetkazib berish"
+    },
+    "returnGuarantee": {
+      "title": "Qaytish kafolati",
+      "description": "30 kun ichida pulni qaytarish"
+    },
+    "onlineSupport": {
+      "title": "24/7 onlayn qo'llab-quvvatlash",
+      "description": "Texnik qo'llab-quvvatlash 24/7"
+    },
+    "securePayment": {
+      "title": "Xavfsiz to'lov",
+      "description": "Barcha to'lov usullari qabul qilinadi"
+    }
+  },
+  "winter": {
+    "materialQuality": {
+      "percentage": "100%",
+      "quality": "Material sifat"
+    },
+    "companyDescription": {
+      "title": "'Buxoro Tabiiy Mahsulot'",
+      "description": "ko'p yillardan beri butun dunyo bo'ylab foydalanish uchun paxta matolarini ishlab chiqaruvchi kompaniya"
+    }
+  },
+  "winterCollection": {
+    "title": "Qishki kolleksiya",
+    "description": "Buxoro Tabiiy Mahsulot"
+  }
+}

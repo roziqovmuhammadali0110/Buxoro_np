@@ -1,22 +1,24 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const DetailsPage = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("description");
   const location = useLocation();
   const { item } = location.state || {};
 
   if (!item) {
-    return <p>Ma'lumot topilmadi.</p>;
+    return <p>{t("detailsPage.noData")}</p>;
   }
 
   const details = [
-    { label: "Material", value: item.Material },
-    { label: "Pillowcase", value: item.Pillowcase },
-    { label: "Bed sheet", value: item.sheet },
-    { label: "Duvet cover", value: item.Duvet },
-    { label: "Size", value: item.Size },
-    { label: "Manufacturer", value: item.Manufacturer }
+    { label: t("detailsPage.material"), value: item.Material },
+    { label: t("detailsPage.pillowcase"), value: item.Pillowcase },
+    { label: t("detailsPage.sheet"), value: item.sheet },
+    { label: t("detailsPage.duvetCover"), value: item.Duvet },
+    { label: t("detailsPage.size"), value: item.Size },
+    { label: t("detailsPage.manufacturer"), value: item.Manufacturer }
   ];
 
   const Star = ({ filled }) => (
@@ -36,7 +38,7 @@ const DetailsPage = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-10 pb-20">
-        {/* First div */}
+        {/* Birinchi div */}
         <div className="w-full lg:w-2/3">
           <img
             src={item.img}
@@ -45,7 +47,7 @@ const DetailsPage = () => {
           />
         </div>
 
-        {/* Second div */}
+        {/* Ikkinchi div */}
         <div className="w-full lg:w-1/3 space-y-6 lg:space-y-8">
           <h1 className="text-2xl lg:text-4xl font-bold">{item.name}</h1>
           <div className="border-2 p-4 rounded-lg">
@@ -63,8 +65,10 @@ const DetailsPage = () => {
             ))}
           </div>
           <div className="flex items-center text-base lg:text-lg gap-1">
-            <p>Category: </p>
-            <p className="text-[#9E7050]">Winter collection</p>
+            <p>{t("detailsPage.category")}:</p>
+            <p className="text-[#9E7050]">
+              {t("detailsPage.winterCollection")}
+            </p>
           </div>
         </div>
       </div>
@@ -78,7 +82,7 @@ const DetailsPage = () => {
                 ? "border-t-4 font-bold text-[#515151] text-[25px] border-[#F42C37]"
                 : "text-[#CFCFCF] font-bold text-[20px]"
             }`}>
-            Description
+            {t("detailsPage.descriptionTab")}
           </button>
           <button
             onClick={() => setActiveTab("reviews")}
@@ -87,22 +91,20 @@ const DetailsPage = () => {
                 ? "border-t-4 font-bold text-[#515151] text-[25px] border-[#F42C37]"
                 : "text-[#CFCFCF] font-bold text-[20px]"
             }`}>
-            Reviews (0)
+            {t("detailsPage.reviewsTab")} (0)
           </button>
         </div>
         {activeTab === "description" && (
           <div className="w-full flex items-center justify-center">
             <div className="w-[70%] xs:w-[100%] lg:w-[80%] xl:w-[70%] space-y-4">
-              <h2 className="text-3xl font-bold">Description</h2>
-              <h2 className="text-[25px] font-bold">Alpari bedding set</h2>
+              <h2 className="text-3xl font-bold">
+                {t("detailsPage.descriptionTitle")}
+              </h2>
+              <h2 className="text-[25px] font-bold">
+                {t("detailsPage.beddingSetName")}
+              </h2>
               <p className="text-[18px] font-normal text-[#666666]">
-                Bed linen is a household item and bedroom decor designed for
-                comfort and beauty. You can choose from a variety of bed sets
-                that include sheets, blankets, pillow crafts and other
-                accessories. They have various designs, prints, embroideries or
-                other design elements. They are easy and quick to clean and
-                clean. They are made from soft materials and they make your
-                bedrooms cozy and cozy.
+                {t("detailsPage.descriptionText")}
               </p>
             </div>
           </div>
@@ -110,21 +112,24 @@ const DetailsPage = () => {
         {activeTab === "reviews" && (
           <div className="w-full flex items-center flex-col justify-center space-y-7">
             <div className="w-[70%] xs:w-[100%] lg:w-[90%] xl:w-[70%] space-y-4 pb-7">
-              <h2 className="text-3xl font-bold">Reviews</h2>
+              <h2 className="text-3xl font-bold">
+                {t("detailsPage.reviewsTitle")}
+              </h2>
               <p className="text-[#666666] text-[18px] font-normal">
-                There are no reviews yet.
+                {t("detailsPage.noReviews")}
               </p>
             </div>
             <div className="w-[70%] space-y-1 xs:w-[100%] lg:w-[80%] xl:w-[70%]">
               <h2 className="text-2xl font-bold">
-                Be the first to review “Alpari”
+                {t("detailsPage.firstReviewTitle")}
               </h2>
               <p className="text-[#666666] text-[17px] font-normal">
-                Your email address will not be published. Required fields are
-                marked *
+                {t("detailsPage.emailDisclaimer")}
               </p>
               <div className="flex items-center justify-start">
-                <h2 className="text-xl font-bold">Your rating *</h2>
+                <h2 className="text-xl font-bold">
+                  {t("detailsPage.ratingLabel")}
+                </h2>
                 <p className="flex items-center">
                   <Star filled={false} />
                   <Star filled={false} />
@@ -141,7 +146,7 @@ const DetailsPage = () => {
                     <label
                       className="text-[17px] font-medium pl-4 pb-2"
                       htmlFor="name">
-                      Name *
+                      {t("detailsPage.nameLabel")} *
                     </label>
                     <input
                       className="w-full p-4 bg-[#EFEFEF] outline-none pl-7 rounded-[30px]"
@@ -155,7 +160,7 @@ const DetailsPage = () => {
                     <label
                       className="text-[17px] font-medium pl-4 pb-2"
                       htmlFor="email">
-                      Email *
+                      {t("detailsPage.emailLabel")} *
                     </label>
                     <input
                       className="w-full p-4 bg-[#EFEFEF] outline-none pl-7 rounded-[30px]"
@@ -170,7 +175,7 @@ const DetailsPage = () => {
                   <label
                     className="text-[17px] font-medium pl-4 pb-2"
                     htmlFor="review">
-                    Your review
+                    {t("detailsPage.reviewLabel")}
                   </label>
                   <textarea
                     className="w-full h-[323px] p-4 bg-[#EFEFEF] outline-none rounded-3xl"
@@ -182,7 +187,7 @@ const DetailsPage = () => {
                   <button
                     type="submit"
                     className="self-start text-[19px] py-3 w-[180px] bg-[#F42C37] text-white rounded-full">
-                    Send
+                    {t("detailsPage.submitButton")}
                   </button>
                 </div>
               </form>

@@ -12,12 +12,13 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleChange = (event) => {
+  const handleChangeLanguage = (event) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
+    localStorage.setItem("i18nextLng", selectedLanguage); // Tanlangan tilni localStorage'ga saqlash
   };
 
-  const language = localStorage.getItem("i18nextLng");
+  const language = i18n.language || localStorage.getItem("i18nextLng") || "uz";
 
   return (
     <nav className="flex items-center justify-between p-4 bg-white shadow-xl text-[18px]">
@@ -34,7 +35,7 @@ function Navbar() {
                   ? "text-blue-500 border-b-2 border-blue-800"
                   : "text-black hover:text-blue-600"
               }>
-              Home
+              {t("navbar.home")}
             </NavLink>
           </li>
           <li>
@@ -45,7 +46,7 @@ function Navbar() {
                   ? "text-blue-500 border-b-2 border-blue-800"
                   : "text-black hover:text-blue-600"
               }>
-              About
+              {t("navbar.about")}
             </NavLink>
           </li>
           <li>
@@ -56,7 +57,7 @@ function Navbar() {
                   ? "text-blue-500 border-b-2 border-blue-800"
                   : "text-black hover:text-blue-600"
               }>
-              Collection
+              {t("navbar.collection")}
             </NavLink>
           </li>
           <li>
@@ -67,7 +68,7 @@ function Navbar() {
                   ? "text-blue-500 border-b-2 border-blue-800"
                   : "text-black hover:text-blue-600"
               }>
-              Contact
+              {t("navbar.contact")}
             </NavLink>
           </li>
         </ul>
@@ -75,10 +76,10 @@ function Navbar() {
           value={language}
           name="Lng"
           id="lng"
-          onChange={handleChange}
+          onChange={handleChangeLanguage}
           className="border-2 rounded-md p-1 ml-3">
           <option value="ru">Русский</option>
-          <option value="uz">Узбек</option>
+          <option value="uz">O'zbekcha</option>
           <option value="en">English</option>
         </select>
       </div>
@@ -103,7 +104,7 @@ function Navbar() {
                 : "text-black hover:text-blue-600"
             }
             onClick={() => setIsMenuOpen(false)}>
-            Home
+            {t("navbar.home")}
           </NavLink>
           <NavLink
             to="/about"
@@ -113,7 +114,7 @@ function Navbar() {
                 : "text-black hover:text-blue-600"
             }
             onClick={() => setIsMenuOpen(false)}>
-            About
+            {t("navbar.about")}
           </NavLink>
           <NavLink
             to="/collection"
@@ -123,7 +124,7 @@ function Navbar() {
                 : "text-black hover:text-blue-600"
             }
             onClick={() => setIsMenuOpen(false)}>
-            Collection
+            {t("navbar.collection")}
           </NavLink>
           <NavLink
             to="/contact"
@@ -133,7 +134,7 @@ function Navbar() {
                 : "text-black hover:text-blue-600"
             }
             onClick={() => setIsMenuOpen(false)}>
-            Contact
+            {t("navbar.contact")}
           </NavLink>
         </div>
       )}

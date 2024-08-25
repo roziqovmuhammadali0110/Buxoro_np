@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
 import winter from "../assets/data/winter";
+import { useTranslation } from "react-i18next";
 
 const WinterCollection = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="lg:py-20 container mx-auto">
       <div className="w-full text-center">
         <h1 className="font-bold text-[65px] xs:text-[38px] md:text-[45px] lg:text-[50px] xl:text-[65px] text-[#000000]">
-          Winter collection
+          {t("winterCollection.title")}
         </h1>
-        <p className="text-[22px] text-[#919191]">Bukhara Natural Product</p>
+        <p className="text-[22px] text-[#919191]">
+          {t("winterCollection.description")}
+        </p>
       </div>
       <div className="grid grid-cols-5 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {winter.map((item) => (

@@ -13,28 +13,26 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="h-16 w-auto mb-4" />
           </a>
           <p className="text-gray-700 max-w-[350px] xs:text-[15px] sm:text-[17px] md:text-[18px] lg:text-[20px]">
-            'Bukhara Natural Product' has been a company that produces cotton
-            fabrics for many years for use all over the world.
-            {t("Bukhara Natural Product")}
+            {t("footer.description")}
           </p>
         </div>
 
         {/* Menyu bo'limi */}
         <ul className="flex flex-col space-y-2 text-gray-700 lg:space-y-4">
           <li className="font-bold text-black">
-            <a href="#">Menu</a>
+            <a href="#">{t("footer.menu")}</a>
           </li>
           <li>
-            <a href="#">Home</a>
+            <a href="#">{t("footer.home")}</a>
           </li>
           <li>
-            <a href="#">About Us</a>
+            <a href="#">{t("footer.aboutUs")}</a>
           </li>
           <li>
-            <a href="#">Collection</a>
+            <a href="#">{t("footer.collection")}</a>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <a href="#">{t("footer.contacts")}</a>
           </li>
         </ul>
 
@@ -42,25 +40,19 @@ const Footer = () => {
         <div className="flex gap-20 xs:gap-3 md:gap-20 xs:space-x-0 md:space-x-4 justify-between xs:flex-col md:flex-row">
           <ul className="flex flex-col space-y-2 text-gray-700 lg:space-y-4">
             <li className="font-bold text-black">
-              <a href="#">Contacts</a>
+              <a href="#">{t("footer.contacts")}</a>
             </li>
             <li>
-              <a href="#">Bukhara, st.Alpomysh 80.</a>
+              <a href="#">{t("footer.contactAddress")}</a>
             </li>
             <li>
-              <a href="#">Bnpuz@bk.ru</a>
+              <a href="#">{t("footer.email")}</a>
             </li>
             <li>
-              <a href="#">bnp_fabrik</a>
+              <a href="#">{t("footer.phone1")}</a>
             </li>
             <li>
-              <a href="#">info@bnpfabric.com</a>
-            </li>
-            <li>
-              <a href="#">+998 93 383 75 85</a>
-            </li>
-            <li>
-              <a href="#">+998 93 960 78 00</a>
+              <a href="#">{t("footer.phone2")}</a>
             </li>
           </ul>
 
@@ -68,17 +60,17 @@ const Footer = () => {
           <div className="w-full lg:w-auto">
             <ul className="mb-4">
               <li className="font-bold text-black lg:text-left">
-                Subscribe to our email
+                {t("footer.subscribeTitle")}
               </li>
             </ul>
             <div className="flex items-center space-x-4 xs:space-x-0 md:space-x-4 gap-2 bg-[#F2F2F2] border-2 p-3 rounded-[45px]">
               <input
                 type="text"
-                placeholder="Enter Your Email"
+                placeholder={t("footer.subscribePlaceholder")}
                 className="w-full lg:w-auto px-4 py-2 bg-none rounded-xl focus:outline-none bg-[#F2F2F2]"
               />
               <button className="bg-[#F42C37] text-white px-4 py-2 rounded-3xl hover:bg-blue-700 transition duration-300 w-[200px] lg:w-auto">
-                Subscribe
+                {t("footer.subscribeButton")}
               </button>
             </div>
           </div>

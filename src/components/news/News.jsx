@@ -1,13 +1,17 @@
+import { useTranslation } from "react-i18next";
 import news from "../../assets/data/news";
-const SummerCollection = () => {
+
+const News = () => {
+  const { t } = useTranslation(); // Tarjima funksiyasini chaqiramiz
+
   return (
-    <div className=" container mx-auto">
+    <div className="container mx-auto">
       <div className="w-full text-center">
         <h1 className="font-bold text-[65px] xs:text-[38px] md:text-[45px] lg:text-[50px] xl:text-[65px] text-[#000000]">
-          News
+          {t("news.title")}
         </h1>
         <p className="text-[22px] xs:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] text-[#919191]">
-          Bukhara Natural Product
+          {t("news.description")}
         </p>
       </div>
       <div className="grid grid-cols-3 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -15,7 +19,7 @@ const SummerCollection = () => {
           return (
             <div
               key={index}
-              className="text-[#000000] w-full  px-4 py-12 rounded-2xl hover:text-red-500 hover:font-bold">
+              className="text-[#000000] w-full px-4 py-12 rounded-2xl hover:text-red-500 hover:font-bold">
               <img
                 src={item.img}
                 alt=""
@@ -38,4 +42,4 @@ const SummerCollection = () => {
   );
 };
 
-export default SummerCollection;
+export default News;
