@@ -78,7 +78,6 @@ function Navbar() {
           id="lng"
           onChange={handleChangeLanguage}
           className="border-2 rounded-md p-1 ml-3">
-          <option value="ru">Русский</option>
           <option value="uz">O'zbekcha</option>
           <option value="en">English</option>
         </select>
